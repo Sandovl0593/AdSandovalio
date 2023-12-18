@@ -1,17 +1,17 @@
 ---
 interface Props {
-    areaSection: String;
+  areaSection: String;
 }
 
 const { areaSection } = Astro.props;
 ---
 
 <div id="section" class="bg-sky-300">
-    <slot />
+  <slot />
 </div>
 
 <style define:vars={{ areaSection }}>
-    #section {
-        grid-area: var(--areaSection);
-    }
+  #section {
+    grid-area: var(--areaSection);
+  }
 </style>
