@@ -6,8 +6,10 @@ interface Props {
 const { areaSection } = Astro.props;
 ---
 
-<div id="section" class="bg-sky-300">
-  <slot />
+<div id="section" class="rounded-2xl bg-ptgreen-800 p-5">
+  <div class="bg-amber-400">
+    <slot />
+  </div>
 </div>
 
 <style define:vars={{ areaSection }}>
