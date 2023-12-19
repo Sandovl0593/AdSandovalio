@@ -1,4 +1,6 @@
 ---
+import NavBar from "@/components/NavBar.astro";
+
 interface Props {
   title: string;
 }
@@ -17,8 +19,10 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
 
-  <body class="bg-ptgreen-950">
-    <div id="app" class="relative flex h-full items-stretch gap-2">
+  <body class="bg-mantis-980 text-white">
+    <span id="top"></span>
+    <NavBar />
+    <div id="app" class="relative flex h-full gap-2 pt-12">
       <slot />
     </div>
   </body>
@@ -32,13 +36,17 @@ const { title } = Astro.props;
   #app {
     display: grid;
     grid-template-areas:
-      "profile navbar"
+      "profile image1"
       "profile info"
       "experience techs"
       "softskills techs"
       "projects projects";
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 24vh 40vh 30vh 30vh auto;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
@@ -55,7 +63,7 @@ const { title } = Astro.props;
 
     #app {
       grid-template-areas:
-        "navbar"
+        "image1"
         "profile"
         "info"
         "experience"
@@ -63,7 +71,7 @@ const { title } = Astro.props;
         "techs"
         "projects";
       grid-template-columns: 1fr;
-      grid-template-rows: 7vh 60vh 40vh 30vh 30vh 20vh auto;
+      grid-template-rows: 10vh 60vh 40vh 30vh 30vh 20vh auto;
     }
   }
 </style>

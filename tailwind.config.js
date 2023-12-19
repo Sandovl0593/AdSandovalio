@@ -3,22 +3,27 @@ export default {
   content: ["./src/**/*.{astro,html,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      screens: {
+        md: { max: "950px" },
+        lmd: { max: "550px" },
+      },
       colors: {
-        ptgreen: {
-          50: "#f1fdf0",
-          100: "#dffbdd",
-          200: "#bff5bd",
-          300: "#6fe66b",
-          400: "#53d94f",
-          500: "#2cbf28",
-          600: "#1f9e1b",
-          700: "#1b7c19",
-          800: "#1a6219",
-          900: "#165116",
-          950: "#062d07",
+        mantis: {
+          50: "#f2fbf3",
+          100: "#e0f8e2",
+          200: "#c2f0c6",
+          300: "#93e29b",
+          400: "#5ccc69",
+          500: "#3bc44b",
+          600: "#279233",
+          700: "#22732c",
+          800: "#1f5c27",
+          900: "#1c4b23",
+          950: "#0a290f",
+          980: "#071a0a",
         },
       },
+      plugins: [],
     },
-    plugins: [],
   },
 };
