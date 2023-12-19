@@ -5,7 +5,7 @@ export default {
     extend: {
       screens: {
         md: { max: "950px" },
-        lmd: { max: "550px" },
+        // lmd: { max: "850px" },
       },
       colors: {
         mantis: {
