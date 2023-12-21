@@ -1,8 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import Cover from "@/layouts/Cover.astro";
+import ProfilePhoto from "@/assets/profile.jpg";
 ---
 
-<Cover areaSection="profile">Profile</Cover>
+<Cover areaSection="profile">
+  <section class="relative flex h-full items-center justify-around">
+    <div id="photo" class="">
+      <div class="px-3">
+        <Image src={ProfilePhoto} alt="Profile Photo" />
+      </div>
+    </div>
+    <div id="description">
+      <div class="">DESCRIPTION</div>
+    </div>
+  </section>
+</Cover>
 
 <Cover areaSection="image1">Image1</Cover>
 
