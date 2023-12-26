@@ -6,14 +6,12 @@ interface Props {
 const { areaSection } = Astro.props;
 ---
 
-<div id="section" class="rounded-2xl bg-mantis-950 p-4">
-  <div class="h-full w-full bg-mantis-900">
-    <slot />
-  </div>
-</div>
+<section class="rounded-2xl bg-slate-800">
+  <slot />
+</section>
 
 <style define:vars={{ areaSection }}>
-  #section {
+  section {
     grid-area: var(--areaSection);
   }
 </style>

@@ -19,16 +19,21 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
 
-  <body class="bg-mantis-980 text-white">
+  <body class="bg-slate-950 text-white">
     <span id="top"></span>
     <NavBar />
-    <div id="app" class="relative flex h-full gap-2 pt-20">
+    <div id="app" class="relative flex h-full gap-4 pt-20">
       <slot />
     </div>
   </body>
 </html>
 
 <style is:global>
+  @font-face {
+    font-family: "RethinkSans";
+    src: url("RethinkSans.ttf");
+  }
+
   :root {
     --height-body-def: 1700px;
   }
@@ -36,42 +41,42 @@ const { title } = Astro.props;
   #app {
     display: grid;
     grid-template-areas:
-      "profile image1"
       "profile info"
+      "profile image1"
       "experience techs"
-      "softskills techs"
+      "image2 techs"
       "projects projects";
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 24vh 40vh 30vh 30vh auto;
+    grid-template-rows: 40vh 24vh 60vh 14vh auto;
   }
 
   html {
     scroll-behavior: smooth;
+    font-family: "RethinkSans", system-ui, sans-serif;
   }
 
   body {
-    font-family: system-ui, sans-serif;
     width: 75%;
     height: var(--height-body-def);
     margin: 0 auto;
   }
 
-  @media (max-width: 950px) {
+  @media (max-width: 1100px) {
     body {
       height: calc(var(--height-body-def) * 1.5);
     }
 
     #app {
       grid-template-areas:
-        "image1"
         "profile"
         "info"
+        "image1"
         "experience"
-        "softskills"
         "techs"
+        "image2"
         "projects";
       grid-template-columns: 1fr;
-      grid-template-rows: 10vh 60vh 40vh 30vh 30vh 20vh auto;
+      grid-template-rows: 64vh 60vh 14vh 30vh 14vh 14vh auto;
     }
   }
 </style>

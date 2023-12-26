@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        md: { max: "950px" },
+        md: { max: "850px" },
         // lmd: { max: "850px" },<
       },
       colors: {

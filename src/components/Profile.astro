@@ -1,22 +1,30 @@
 ---
 import { Image } from "astro:assets";
-import Cover from "@/layouts/Cover.astro";
+import Card from "@/layouts/Card.astro";
 import ProfilePhoto from "@/assets/profile.jpg";
 ---
 
-<Cover areaSection="profile">
-  <section class="relative flex h-full items-center justify-around">
-    <div id="photo" class="">
-      <div class="px-3">
-        <Image src={ProfilePhoto} alt="Profile Photo" />
-      </div>
+<Card areaSection="profile">
+  <div
+    class="relative flex h-full items-center justify-between gap-10 px-12 py-3"
+  >
+    <div id="photo">
+      <Image src={ProfilePhoto} alt="Profile Photo" class="rounded-full" />
     </div>
-    <div id="description">
-      <div class="">DESCRIPTION</div>
-    </div>
-  </section>
-</Cover>
+    <article class="flex max-h-72 w-3/5 flex-col gap-3 text-wrap">
+      <span class="text-3xl font-bold text-yellow-200">ADRIAN SANDOVAL H.</span>
+      <p>
+        Joven apasionado, dedidado y en constante aprendizaje a las las
+        tecnologías del desarrollo de software, diseño de algoritmos y ciencia
+        de datos Ampliamente
+      </p>
+      <p>
+        Actual estudiante de pregrado de la carrera de Computer Science en UTEC.
+      </p>
+    </article>
+  </div>
+</Card>
 
-<Cover areaSection="image1">Image1</Cover>
+<Card areaSection="image1">Image1</Card>
 
-<Cover areaSection="info">Info</Cover>
+<Card areaSection="info">Info</Card>
