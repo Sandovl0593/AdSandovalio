@@ -11,6 +11,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.0.3
     version: 5.0.4(astro@4.0.7)(tailwindcss@3.4.0)
+  '@fontsource/onest':
+    specifier: ^5.0.2
+    version: 5.0.2
   astro:
     specifier: ^4.0.6
     version: 4.0.7(typescript@5.3.3)
@@ -618,6 +621,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource/onest@5.0.2:
+    resolution: {integrity: sha512-BAQOSTJOHl/4+0KSuabfgLBDNeViWGbFELcJ4cC88W9HkJ6LUuMaDGdS6hQt4c/jz1KaKZCe8xoROHMz9QUSrA==}
+    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}

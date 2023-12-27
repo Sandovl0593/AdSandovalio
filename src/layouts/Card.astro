@@ -6,7 +6,9 @@ interface Props {
 const { areaSection } = Astro.props;
 ---
 
-<section class="rounded-2xl bg-slate-800">
+<section
+  class="flex flex-col items-center rounded-lg bg-slate-800 shadow duration-300 hover:bg-slate-700 hover:duration-300 md:flex-row"
+>
   <slot />
 </section>
 

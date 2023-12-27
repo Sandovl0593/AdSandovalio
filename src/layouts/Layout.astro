@@ -1,5 +1,7 @@
 ---
 import NavBar from "@/components/NavBar.astro";
+import Gradient from "@/components/Gradient.astro";
+import "@fontsource/onest";
 
 interface Props {
   title: string;
@@ -21,19 +23,15 @@ const { title } = Astro.props;
 
   <body class="bg-slate-950 text-white">
     <span id="top"></span>
+    <Gradient />
     <NavBar />
-    <div id="app" class="relative flex h-full gap-4 pt-20">
+    <div id="app" class="relative flex h-full gap-4 pt-20 lmd:pt-16">
       <slot />
     </div>
   </body>
 </html>
 
 <style is:global>
-  @font-face {
-    font-family: "RethinkSans";
-    src: url("RethinkSans.ttf");
-  }
-
   :root {
     --height-body-def: 1700px;
   }
@@ -47,18 +45,19 @@ const { title } = Astro.props;
       "image2 techs"
       "projects projects";
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 40vh 24vh 60vh 14vh auto;
+    grid-template-rows: 280px 90px 400px 90px auto;
   }
 
   html {
     scroll-behavior: smooth;
-    font-family: "RethinkSans", system-ui, sans-serif;
+    font-family: "Onest", system-ui, sans-serif;
   }
 
   body {
     width: 75%;
     height: var(--height-body-def);
     margin: 0 auto;
+    min-height: 100vh;
   }
 
   @media (max-width: 1100px) {
@@ -76,7 +75,7 @@ const { title } = Astro.props;
         "image2"
         "projects";
       grid-template-columns: 1fr;
-      grid-template-rows: 64vh 60vh 14vh 30vh 14vh 14vh auto;
+      grid-template-rows: 0.2fr 230px 90px 200px 90px 60px auto;
     }
   }
 </style>

@@ -7,7 +7,7 @@
       "@/components": ["src/components/*"],
       "@/layouts": ["src/layouts/*"],
       "@/templates": ["src/templates/*"],
-      "@/assets": ["src/assets/*"]
+      "@/assets": ["src/assets/*"],
     }
   }
 }
