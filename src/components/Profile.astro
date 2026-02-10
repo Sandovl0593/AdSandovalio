@@ -21,21 +21,22 @@ import GithubIcon from "./icons/GithubIcon.astro";
     class="flex h-max flex-col justify-between px-12 leading-normal md:px-0 md:py-8"
   >
     <header class="mb-4">
-      <h1 class="text-3xl font-bold text-yellow-200 lmd:text-xl">
-        Hola, soy Adrian Sandoval H.
+      <h1 class="text-2xl font-bold text-yellow-200 lmd:text-xl">
+        Hola, soy Adrian Sandoval Huamaní
       </h1>
       <h3 class="font-bold lmd:text-xs">
-        Estudiante de la carrera de Computer Science en UTEC.
+        Computer Science | Data Analysis & ML focused
       </h3>
     </header>
     <p class="mb-3 font-normal text-gray-700 lmd:text-xs dark:text-gray-400">
-      Joven apasionado, dedicado y en constante aprendizaje a las las
-      tecnologías del desarrollo de software, diseño de algoritmos y ciencia de
-      datos.
+      Profesional desde el pregrado (9° ciclo) en aprendizaje continuo en la
+      resolución de problemas dirigidos a sectores de propósito social y
+      financiero demostrando habilidades técnicas en procesamiento, analítica, visualización y técnicas de Machine
+      Learning.
     </p>
     <footer class="flex flex-row gap-10 text-xs">
       <a
-        href="https://www.linkedin.com/in/adSandovalio"
+        href="https://www.linkedin.com/in/adsandovalio/"
         class="flex h-8 w-8 duration-200 hover:rounded-md hover:bg-slate-700"
       >
         <LinkedInIcon class="m-auto h-6 w-6" />
@@ -46,10 +47,30 @@ import GithubIcon from "./icons/GithubIcon.astro";
       >
         <GithubIcon class="m-auto h-6 w-6" />
       </a>
+      <div class="flex flex-col text-gray-400">
+        <span>Lima, Perú</span>
+        <!-- <a href="mailto:adrian.sandoval@utec.edu.pe" class="hover:text-white"
+          >adrian.sandoval@utec.edu.pe</a
+        > -->
+        <span>(+51) 939 772 757</span>
+      </div>
     </footer>
   </article>
 </main>
 
-<Card areaSection="image1">Image1</Card>
-
-<Card areaSection="info">Info</Card>
+<Card areaSection="info">
+  <div class="flex h-full w-full flex-col p-6">
+    <h2 class="mb-4 text-2xl font-bold text-yellow-200">
+      Formación Académica
+    </h2>
+    <div class="flex flex-col gap-2">
+      <h3 class="text-md">Universidad de Ingeniería y Tecnología, Barranco</h3>
+      <p class="text-sm text-gray-300">
+        Ciencia de la Computación | Becario PRONABEC (Beca 18)
+      </p>
+      <p class="text-xs text-gray-400">
+        Set, 2021 - actualidad
+      </p>
+    </div>
+  </div>
+</Card>

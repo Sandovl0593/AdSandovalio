@@ -1,5 +1,22 @@
 ---
 import Card from "@/layouts/Card.astro";
+import SkillMarquee from "@/components/SkillMarquee.astro";
 ---
 
-<Card areaSection="techs">Techs</Card>
+<Card areaSection="techs">
+  <div class="flex h-full w-full flex-col p-8 md:p-4">
+    <h2 class="mb-6 text-2xl font-bold text-yellow-200">Habilidades</h2>
+    <div class="flex flex-col gap-1">
+      <h3 class="font-bold pb-5 text-gray-200">Data Processing & ML</h3>
+      <SkillMarquee skills={["python", "r", "sklearn", "pytorch", "git", "github", "tensorflow"]} speed="30s" />
+    </div>
+    <div class="flex flex-col gap-1">
+      <h3 class="font-bold py-5 text-gray-200">Data Analysis</h3>
+      <SkillMarquee skills={["excel", "mysql", "postgres", "aws", "gcp"]} speed="35s" />
+    </div>
+    <div class="flex flex-col gap-1">
+      <h3 class="font-bold py-5 text-gray-200">Back-end/Web</h3>
+      <SkillMarquee skills={["nodejs", "react", "vue", "supabase", "postman", "html", "css", "js"]} speed="25s" />
+    </div>
+  </div>
+</Card>

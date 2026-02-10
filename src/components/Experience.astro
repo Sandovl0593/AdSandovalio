@@ -1,7 +1,40 @@
 ---
 import Card from "@/layouts/Card.astro";
+import ExperienceItem from "@/layouts/ExperienceItem.astro";
 ---
 
-<Card areaSection="experience">Experience</Card>
+<Card areaSection="volunteers">
+  <div class="flex h-full w-full flex-col p-8 md:p-4">
+    <h2 class="mb-6 text-2xl font-bold text-yellow-200">Voluntariados</h2>
+    <div class="flex flex-col gap-6">
+      <ExperienceItem
+        title="Talento Guía 2025-2"
+        date="Setiembre 2025"
+        description="Seguimiento y orientación a un estudiante beneficiario de Beca 18 de
+        UTEC desde el primer ciclo de estudios, brindando espacios de mentorías
+        anticipadas con temáticas clave para sobrellevar los primeros pasos de
+        su nueva etapa universitaria."
+      />
 
-<Card areaSection="image2">Image2</Card>
+      <ExperienceItem
+        title="Asesoría académica en IE’s"
+        date="Octubre 2024"
+        description="Asesor académico de 5º de secundaria de dos IE’s Fé y Alegría en
+        Ayacucho en el reforzamiento virtual de Matemática, mejorando la
+        confiabilidad y el nivel académico de los estudiantes."
+      />
+    </div>
+  </div>
+</Card>
+
+<Card areaSection="image2">
+  <div class="flex h-full w-full flex-col items-center justify-center p-4">
+    <h2 class="mb-4 text-xl font-bold text-yellow-200">Habilidades Blandas</h2>
+    <ul class="flex flex-col gap-2 text-center text-sm text-gray-300">
+      <li>Trabajo en equipo y coordinación</li>
+      <li>Curiosidad y entusiasmo</li>
+      <li>Comunicación técnica asertiva</li>
+      <li>Aprendizaje autodidacta</li>
+    </ul>
+  </div>
+</Card>

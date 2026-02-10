@@ -1,0 +1,54 @@
+---
+import IconMapper from '@/layouts/IconMapper.astro';
+
+interface Props {
+  skills: string[];
+  speed?: string;
+  className?: string;
+}
+
+const { skills, speed = "30s", className = "" } = Astro.props;
+---
+
+<div
+  class={`marquee-container w-full overflow-hidden whitespace-nowrap mask-gradient ${className}`}
+>
+  <div class="marquee-content hover:pause flex w-max gap-[6em]">
+    {skills.map((skill) => (
+      <IconMapper name={skill} />
+    ))}
+    {skills.map((skill) => (
+      <IconMapper name={skill} />
+    ))}
+  </div>
+</div>
+
+<style define:vars={{ speed }}>
+  .marquee-container {
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .marquee-content {
+    animation: scroll var(--speed) linear infinite;
+  }
+
+  /* Pause animation on hover for better accessibility/viewing */
+  .hover\:pause:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>

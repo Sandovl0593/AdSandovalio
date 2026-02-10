@@ -25,27 +25,24 @@ const { title } = Astro.props;
     <span id="top"></span>
     <Gradient />
     <NavBar />
-    <div id="app" class="relative flex h-full gap-4 pt-20 lmd:pt-16">
+    <div id="app" class="relative h-full gap-4 pt-20 lmd:pt-16">
       <slot />
     </div>
   </body>
 </html>
 
 <style is:global>
-  :root {
-    --height-body-def: 1700px;
-  }
-
   #app {
     display: grid;
     grid-template-areas:
       "profile info"
-      "profile image1"
-      "experience techs"
-      "image2 techs"
-      "projects projects";
+      "profile info"
+      "projects projects"
+      "volunteers image2"
+      "techs techs";
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 280px 90px 400px 90px auto;
+    grid-template-rows: auto auto auto auto auto;
+    row-gap: 1rem;
   }
 
   html {
@@ -55,14 +52,15 @@ const { title } = Astro.props;
 
   body {
     width: 75%;
-    height: var(--height-body-def);
+    height: auto;
     margin: 0 auto;
     min-height: 100vh;
   }
 
   @media (max-width: 1100px) {
     body {
-      height: calc(var(--height-body-def) * 1.5);
+      height: auto;
+      width: 90%;
     }
 
     #app {
@@ -70,12 +68,15 @@ const { title } = Astro.props;
         "profile"
         "info"
         "image1"
-        "experience"
+        "volunteers"
         "techs"
         "image2"
-        "projects";
+        "projects"
+        ;
       grid-template-columns: 1fr;
-      grid-template-rows: 0.2fr 230px 90px 200px 90px 60px auto;
+      grid-template-rows: auto;
+      row-gap: 1.5rem;
+      padding-bottom: 2rem;
     }
   }
 </style>
