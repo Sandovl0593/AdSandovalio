@@ -1,15 +1,7 @@
 ---
 import Card from "@/layouts/Card.astro";
-import PythonIcon from "./icons/PythonIcon.astro";
-import PostgresIcon from "./icons/PostgresIcon.astro";
-import AWSIcon from "./icons/AWSIcon.astro";
-import ReactIcon from "./icons/ReactIcon.astro";
-import PowerBIIcon from "./icons/PowerBIIcon.astro";
-import NodeIcon from "./icons/NodeIcon.astro";
-import GitIcon from "./icons/GitIcon.astro";
 
 import ProjectItem from "@/layouts/ProjectItem.astro";
-
 ---
 
 <Card areaSection="projects">
@@ -19,55 +11,61 @@ import ProjectItem from "@/layouts/ProjectItem.astro";
       Proyectos Académicos
     </h2>
     <div class="grid grid-cols-2 gap-6 md:grid-cols-1">
-      <!-- Project 1 -->
+       <!-- Project 1 -->
+      <ProjectItem
+        title="Clasificacion de tumores con imagenes histopalogógicas"
+        date="Oct. - Dic. 2025"
+        description="Clasificación histopatológica usando 
+        modelos de ResNet18 y CNN's con Macenko junto con técnicas de preprocesamiento de imágenes para 
+        identificar tumores benignos o malignos."
+        icons="python,jupyter,sklearn,matplotlib,pytorch"
+        argClass="h-6 w-6 text-gray-400 transition-colors"
+      />
+
+
+      <!-- Project 2 -->
       <ProjectItem
         title="Clustering para recomendación de películas"
         date="Nov. 2025"
         description="Implementación y comparación de modelos de clasificación de pósteres
         de películas aplicando procesamiento de imágenes, reducción
         dimensional y algoritmos de clustering como K-Means y DBSCAN."
-      >
-        <PythonIcon class="h-6 w-6 text-gray-400 hover:text-yellow-300 transition-colors" />
-        <GitIcon class="h-6 w-6 text-gray-400 hover:text-red-400 transition-colors" />
-      </ProjectItem>
-
-      <!-- Project 2 -->
-      <ProjectItem
-        title="FeelScan"
-        date="Set - Dic 2023"
-        description="Aplicación web de asistente de recomendación y monitoreo, basada en
-        análisis de patrones emocionales y rendimiento académico integrando
-        servicios de AWS Rekognition y Textract."
-      >
-        <ReactIcon class="h-6 w-6 text-gray-400 hover:text-blue-400 transition-colors" />
-        <NodeIcon class="h-6 w-6 text-gray-400 hover:text-green-500 transition-colors" />
-        <AWSIcon class="h-6 w-6 text-gray-400 hover:text-orange-400 transition-colors" />
-      </ProjectItem>
+        icons="python,jupyter,sklearn,matplotlib"
+        argClass="h-6 w-6 text-gray-400 transition-colors"
+      />
 
       <!-- Project 3 -->
       <ProjectItem
-        title="PremierLeague Analysis"
-        date="Abril 2025"
-        description="Integración de un modelo relacional con PostgreSQL, extracción de
-        datos con Selenium y analítica de performance de los partidos
-        proveniente de datos de la Premier League."
-      >
-        <PythonIcon class="h-6 w-6 text-gray-400 hover:text-yellow-300 transition-colors" />
-        <PostgresIcon class="h-6 w-6 text-gray-400 hover:text-blue-300 transition-colors" />
-        <PowerBIIcon class="h-6 w-6 text-gray-400 hover:text-yellow-500 transition-colors" />
-      </ProjectItem>
+        title="FeelScan"
+        date="Set. - Dic. 2023"
+        description="Aplicación web de asistente de recomendación y monitoreo, basada en
+        análisis de patrones emocionales y rendimiento académico integrando
+        servicios de AWS Rekognition y Textract."
+        icons="fastapi,vue,db,nodejs,aws"
+        argClass="h-6 w-6 text-gray-400 transition-colors"
+      />
 
       <!-- Project 4 -->
+      <ProjectItem
+        title="Premier League Analysis"
+        date="Abril 2025"
+        description="Integración de un modelo relacional, extracción de
+        datos con Selenium y analítica de performance de los partidos
+        proveniente de datos de la Premier League."
+        icons="python,db,powerbi"
+        argClass="h-6 w-6 text-gray-400 transition-colors"
+      />
+
+      <!-- Project 5 -->
       <ProjectItem
         title="Búsqueda de canciones Spotify"
         date="Junio - Julio 2024"
         description="Sistema de motor de búsqueda eficiente mediante índices invertidos
         utilizando canciones de Spotify aplicando Python y PostgreSQL que
         mejora la relevancia y precisión de los resultados."
-      >
-        <PythonIcon class="h-6 w-6 text-gray-400 hover:text-yellow-300 transition-colors" />
-        <PostgresIcon class="h-6 w-6 text-gray-400 hover:text-blue-300 transition-colors" />
-      </ProjectItem>
+        icons="python,jupyter,db,postgres"
+        argClass="h-6 w-6 text-gray-400 transition-colors"
+      />
     </div>
   </div>
 </Card>

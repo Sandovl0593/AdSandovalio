@@ -2,41 +2,58 @@
 import AWSIcon from "@/components/icons/AWSIcon.astro";
 import GitIcon from "@/components/icons/GitIcon.astro";
 import GithubIcon from "@/components/icons/GithubIcon.astro";
-// import NodeIcon from "@/components/icons/NodeIcon.astro";
-// import PostgresIcon from "@/components/icons/PostgresIcon.astro";
-// import PowerBIIcon from "@/components/icons/PowerBIIcon.astro";
-// import PythonIcon from "@/components/icons/PythonIcon.astro";
-// import ReactIcon from "@/components/icons/ReactIcon.astro";
+import NodeIcon from "@/components/icons/NodeIcon.astro";
+import PostgresIcon from "@/components/icons/PostgresIcon.astro";
+import PowerBIIcon from "@/components/icons/PowerBIIcon.astro";
+import PythonIcon from "@/components/icons/PythonIcon.astro";
+import ReactIcon from "@/components/icons/ReactIcon.astro";
+import SklearnIcon from "@/components/icons/SklearnIcon.astro";
+import DBIcon from "@/components/icons/DBIcon.astro";
+import VueIcon from "@/components/icons/VueIcon.astro";
+import RIcon from "@/components/icons/RIcon.astro";
+import JupyterIcon from "@/components/icons/JupyterIcon.astro";
+import PlotIcon from "@/components/icons/PlotIcon.astro";
+import PytorchIcon from "@/components/icons/PyTorchIcon.astro";
+import FastAPIIcon from "@/components/icons/FastAPIIcon.astro";
+import ExcelIcon from "@/components/icons/ExcelIcon.astro";
 
 interface Props {
   name: string;
+  classIcon?: string;
 }
 
 const icons = {
   aws: AWSIcon,
   git: GitIcon,
   github: GithubIcon,
-  // nodejs: NodeIcon,
-  // postgres: PostgresIcon,
-  // powerbi: PowerBIIcon,
-  // python: PythonIcon,
-  // react: ReactIcon,
-  // Add other mappings as you create more icons
-  // "r", "sklearn", "pytorch", "tensorflow", "excel", "mysql", "gcp", "vue", "supabase", "postman", "html", "css", "js" are currently missing
+  nodejs: NodeIcon,
+  postgres: PostgresIcon,
+  powerbi: PowerBIIcon,
+  python: PythonIcon,
+  react: ReactIcon,
+  sklearn: SklearnIcon,
+  db: DBIcon,
+  vue: VueIcon,
+  pytorch: PytorchIcon,
+  matplotlib: PlotIcon,
+  r: RIcon,
+  jupyter: JupyterIcon,
+  fastapi: FastAPIIcon,
+  excel: ExcelIcon,
 };
 
-const { name } = Astro.props;
+const { name, classIcon } = Astro.props;
 type IconKey = keyof typeof icons;
 const Icon = icons[name as IconKey];
 ---
 
 {
   Icon ? (
-    <Icon class="h-12 w-12" />
+    <Icon class={classIcon ? classIcon : "h-12 w-12"} />
   ) : (
     <div
       title={name}
-      class="flex h-12 w-12 items-center justify-center truncate rounded bg-gray-700/50 font-mono text-xs text-gray-400"
+      class={`${classIcon} flex h-12 w-12 items-center justify-center truncate rounded bg-gray-700/50 font-mono text-xs text-gray-400`}
     >
       {name}
     </div>
